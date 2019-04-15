@@ -1,5 +1,5 @@
 {
-  "name": "mcm/api-bundle",
+  "name": "dunglas/api-bundle",
   "type": "symfony-bundle",
   "description": "JSON-LD / Hydra REST API for Symfony",
   "keywords": ["REST", "API", "JSON", "JSON-LD", "Hydra"],
@@ -14,14 +14,14 @@
   ],
   "require": {
     "php": ">=5.6",
-    "symfony/serializer": "*",
-    "symfony/validator": "*",
-    "symfony/framework-bundle": "*",
+    "symfony/serializer": "^2.7.2|~3.0",
+    "symfony/validator": "~2.5|~3.0",
+    "symfony/framework-bundle": "~3.4",
     "symfony/proxy-manager-bridge": "*",
     "ocramius/proxy-manager": "~1.0|~2.0",
     "doctrine/inflector": "~1.0",
-    "dunglas/php-property-info": "~0.2",
-    "phpdocumentor/reflection": "3.*"
+    "dunglas/php-property-info": "*",
+    "phpdocumentor/reflection": "*"
   },
   "require-dev": {
     "friendsofsymfony/user-bundle": "~1.3",
