@@ -1,5 +1,5 @@
 {
-  "name": "dunglas/api-bundle",
+  "name": "mcm/api-bundle",
   "type": "symfony-bundle",
   "description": "JSON-LD / Hydra REST API for Symfony",
   "keywords": ["REST", "API", "JSON", "JSON-LD", "Hydra"],
