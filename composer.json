@@ -25,7 +25,7 @@
     "phpdocumentor/reflection": "*"
   },
   "require-dev": {
-    "friendsofsymfony/user-bundle": "~1.3",
+    "friendsofsymfony/user-bundle": "*",
     "behat/behat": "~3.0",
     "behat/symfony2-extension": "~2.0",
     "behat/mink": "~1.5",
@@ -34,7 +34,7 @@
     "behatch/contexts": "~2.3",
     "symfony/finder": "~2.3",
     "doctrine/orm": "~2.2,>=2.2.3",
-    "doctrine/doctrine-bundle": "~1.2",
+    "doctrine/doctrine-bundle": "*",
     "php-mock/php-mock-phpunit": "~1.1"
   },
   "suggest": {
@@ -49,7 +49,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.0.x-dev"
+      "dev-master": "dev-1.x"
     }
   }
 }
