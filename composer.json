@@ -21,7 +21,7 @@
     "symfony/proxy-manager-bridge": "*",
     "ocramius/proxy-manager": "~1.0|~2.0",
     "doctrine/inflector": "~1.0",
-    "dunglas/php-property-info": "*",
+    "symfony/property-info": "*",
     "phpdocumentor/reflection": "*"
   },
   "require-dev": {

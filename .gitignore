@@ -5,3 +5,13 @@ composer.lock
 /features/fixtures/TestApp/cache/*
 /features/fixtures/TestApp/logs/*
 
+
+\.idea/api-bundle-core\.iml
+
+\.idea/misc\.xml
+
+\.idea/modules\.xml
+
+\.idea/vcs\.xml
+
+\.idea/workspace\.xml
