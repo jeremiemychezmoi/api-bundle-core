@@ -5,9 +5,9 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="api.property_info" class="PropertyInfo\PropertyInfo" public="false">
+        <service id="api.property_info" class="Symfony\Component\PropertyInfo\PropertyInfoExtractor" public="false">
             <argument type="collection">
-                <argument type="service" id="api.property_info.setter_extractor" />
+<!--                <argument type="service" id="api.property_info.setter_extractor" />-->
                 <argument type="service" id="api.property_info.php_doc_extractor" />
             </argument>
             <argument type="collection">
@@ -15,9 +15,9 @@
             </argument>
         </service>
 
-        <service id="api.property_info.php_doc_extractor" class="PropertyInfo\Extractors\PhpDocExtractor" public="false" />
+        <service id="api.property_info.php_doc_extractor" class="Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor" public="false" />
 
-        <service id="api.property_info.setter_extractor" class="PropertyInfo\Extractors\SetterExtractor" public="false" />
+<!--        <service id="api.property_info.setter_extractor" class="Symfony\Component\PropertyInfo\Extractor\SetterExtractor" public="false" />-->
     </services>
 
 </container>

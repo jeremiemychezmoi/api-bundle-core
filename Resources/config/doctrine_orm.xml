@@ -52,7 +52,7 @@
             <argument type="service" id="doctrine" />
         </service>
 
-        <service id="api.property_info.doctrine_extractor" class="PropertyInfo\Extractors\DoctrineExtractor" public="false">
+        <service id="api.property_info.doctrine_extractor" class="Symfony\Bridge\Doctrine\PropertyInfo\DoctrineExtractor" public="false">
             <argument type="service" id="api.doctrine.metadata_factory" />
         </service>
     </services>

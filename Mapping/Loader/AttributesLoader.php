@@ -15,7 +15,7 @@ use Dunglas\ApiBundle\Api\ResourceCollectionInterface;
 use Dunglas\ApiBundle\Mapping\AttributeMetadata;
 use Dunglas\ApiBundle\Mapping\ClassMetadata;
 use Dunglas\ApiBundle\Util\ReflectionTrait;
-use PropertyInfo\PropertyInfoInterface;
+use Symfony\Component\PropertyInfo\PropertyInfoExtractor;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
 
 /**
@@ -42,7 +42,7 @@ class AttributesLoader implements LoaderInterface
 
     public function __construct(
         ResourceCollectionInterface $resourceCollection,
-        PropertyInfoInterface $propertyInfo,
+        PropertyInfoExtractor $propertyInfo,
         ClassMetadataFactoryInterface $serializerClassMetadataFactory = null
     ) {
         $this->resourceCollection = $resourceCollection;
@@ -195,7 +195,7 @@ class AttributesLoader implements LoaderInterface
             return $attributeMetadata;
         }
 
-        $types = $this->propertyInfo->getTypes($reflectionProperty);
+        $types = $this->propertyInfo->getTypes($reflectionProperty, $attributeName);
         if (null !== $types) {
             $attributeMetadata->setTypes($types);
         }

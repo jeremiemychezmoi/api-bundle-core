@@ -14,7 +14,7 @@ namespace Dunglas\ApiBundle\Mapping\Loader;
 use Dunglas\ApiBundle\Mapping\ClassMetadata;
 use Dunglas\ApiBundle\Util\ReflectionTrait;
 use phpDocumentor\Reflection\FileReflector;
-use PropertyInfo\PropertyInfoInterface;
+use Symfony\Component\PropertyInfo\PropertyInfoExtractor;
 
 /**
  * Extracts descriptions from PHPDoc.
@@ -41,7 +41,7 @@ class PhpDocLoader implements LoaderInterface
      */
     private $propertyInfo;
 
-    public function __construct(PropertyInfoInterface $propertyInfo)
+    public function __construct(PropertyInfoExtractor $propertyInfo)
     {
         $this->propertyInfo = $propertyInfo;
     }
@@ -66,7 +66,7 @@ class PhpDocLoader implements LoaderInterface
             if ($reflectionProperty = $this->getReflectionProperty(
                 $classMetadata->getReflectionClass(), $attributeMetadata->getName())
             ) {
-                $attributeMetadata->setDescription($this->propertyInfo->getShortDescription($reflectionProperty));
+                $attributeMetadata->setDescription($this->propertyInfo->getShortDescription($reflectionProperty, $attributeMetadata->getName()));
             }
         }
 
