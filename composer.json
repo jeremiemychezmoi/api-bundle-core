@@ -15,9 +15,9 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.6",
-    "symfony/serializer": "^2.7.2|~3.0",
+    "symfony/serializer": "^4",
     "symfony/validator": "^4",
-    "symfony/framework-bundle": "~3.4",
+    "symfony/framework-bundle": ">=3.4",
     "symfony/proxy-manager-bridge": "*",
     "ocramius/proxy-manager": "~1.0|~2.0",
     "doctrine/inflector": "~1.0",
