@@ -9,9 +9,13 @@
             <argument type="collection">
 <!--                <argument type="service" id="api.property_info.setter_extractor" />-->
                 <argument type="service" id="api.property_info.php_doc_extractor" />
+<!--                <argument type="service" id="doctrine.orm.default_entity_manager.property_info_extractor" />-->
+                <argument type="service" id="api.property_info.doctrine_extractor" />
             </argument>
             <argument type="collection">
                 <argument type="service" id="api.property_info.php_doc_extractor" />
+<!--                <argument type="service" id="doctrine.orm.default_entity_manager.property_info_extractor" />-->
+                <argument type="service" id="api.property_info.doctrine_extractor" />
             </argument>
         </service>
 

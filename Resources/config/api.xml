@@ -7,9 +7,9 @@
     <services>
         <service id="api.resource" class="Dunglas\ApiBundle\Api\Resource" public="false" abstract="true" lazy="true" />
 
-        <service id="api.resource_collection" class="Dunglas\ApiBundle\Api\ResourceCollection" lazy="true" />
+        <service id="api.resource_collection" class="Dunglas\ApiBundle\Api\ResourceCollection" lazy="true" public="true" />
 
-        <service id="api.data_provider" class="Dunglas\ApiBundle\Model\DataProviderChain" lazy="true" />
+        <service id="api.data_provider" class="Dunglas\ApiBundle\Model\DataProviderChain" lazy="true" public="true"/>
 
         <service id="api.operation_factory" class="Dunglas\ApiBundle\Api\Operation\OperationFactory" public="false" />
 

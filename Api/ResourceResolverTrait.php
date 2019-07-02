@@ -12,8 +12,8 @@
 namespace Dunglas\ApiBundle\Api;
 
 use Dunglas\ApiBundle\Util\ClassInfoTrait;
-use PropertyInfo\Type;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Symfony\Component\PropertyInfo\Type;
 
 /**
  * This class helps to guess which resource is associated with a given object.
@@ -92,8 +92,8 @@ trait ResourceResolverTrait
     public function getResourceFromType(Type $type)
     {
         if (
-            'object' === $type->getType() &&
-            ($class = $type->getClass()) &&
+            'object' === $type->getBuiltinType() &&
+            ($class = $type->getClassName()) &&
             $resource = $this->resourceCollection->getResourceForEntity($class)
         ) {
             return $resource;

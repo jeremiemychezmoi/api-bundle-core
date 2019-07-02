@@ -11,6 +11,7 @@
 
 namespace Dunglas\ApiBundle\Controller;
 
+use Dunglas\ApiBundle\Api\ResourceCollectionInterface;
 use Dunglas\ApiBundle\Api\ResourceInterface;
 use Dunglas\ApiBundle\Event\DataEvent;
 use Dunglas\ApiBundle\Event\Events;
@@ -33,7 +34,7 @@ use Symfony\Component\Validator\ConstraintViolationListInterface;
 class ResourceController extends Controller
 {
     /**
-     * @var ResourceInterface
+     * @var ResourceInterface $resource
      */
     private $resource;
 
@@ -59,6 +60,7 @@ class ResourceController extends Controller
 
         $shortName = $request->attributes->get('_resource');
         if (!($this->resource = $this->get('api.resource_collection')->getResourceForShortName($shortName))) {
+        //if (!($this->resource = $this->resourceCollection->getResourceForShortName($shortName))) {
             throw new InvalidArgumentException(sprintf('The resource "%s" cannot be found.', $shortName));
         }
 

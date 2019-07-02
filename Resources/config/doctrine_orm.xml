@@ -16,7 +16,7 @@
             <tag name="kernel.event_subscriber" />
         </service>
 
-        <service id="api.doctrine.orm.data_provider" public="false" abstract="true">
+        <service id="api.doctrine.orm.data_provider" class="Dunglas\ApiBundle\Doctrine\Orm\DataProvider" public="false" abstract="true">
             <argument type="service" id="doctrine" />
             <argument>%api.collection.order%</argument>
             <argument>%api.collection.pagination.page_parameter_name%</argument>
@@ -53,7 +53,7 @@
         </service>
 
         <service id="api.property_info.doctrine_extractor" class="Symfony\Bridge\Doctrine\PropertyInfo\DoctrineExtractor" public="false">
-            <argument type="service" id="api.doctrine.metadata_factory" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
         </service>
     </services>
 

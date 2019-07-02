@@ -20,7 +20,7 @@ use Dunglas\ApiBundle\JsonLd\Serializer\ContextTrait;
 use Dunglas\ApiBundle\Model\PaginatorInterface;
 use Dunglas\ApiBundle\Util\RequestParser;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-use Symfony\Component\Serializer\Normalizer\SerializerAwareNormalizer;
+use Symfony\Component\Serializer\SerializerAwareTrait;
 
 /**
  * This normalizer handles collections and paginated collections.
@@ -28,8 +28,9 @@ use Symfony\Component\Serializer\Normalizer\SerializerAwareNormalizer;
  * @author Kevin Dunglas <dunglas@gmail.com>
  * @author Samuel ROZE <samuel.roze@gmail.com>
  */
-class CollectionNormalizer extends SerializerAwareNormalizer implements NormalizerInterface
+class CollectionNormalizer implements NormalizerInterface
 {
+    use SerializerAwareTrait;
     use ResourceResolverTrait;
     use ContextTrait;
 

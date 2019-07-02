@@ -204,12 +204,12 @@ class AttributesLoader implements LoaderInterface
             return $attributeMetadata;
         }
 
-        $class = $types[0]->getClass();
+        $class = $types[0]->getClassName();
 
         if (!$this->resourceCollection->getResourceForEntity($class) && !(
             $types[0]->isCollection() &&
-            $types[0]->getCollectionType() &&
-            ($class = $types[0]->getCollectionType()->getClass()) &&
+            $types[0]->getCollectionKeyType() &&
+            ($class = $types[0]->getCollectionKeyType()->getClassName()) &&
             $this->resourceCollection->getResourceForEntity($class)
         )) {
             return $attributeMetadata;
